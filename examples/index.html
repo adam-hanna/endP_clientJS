@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>My Webpage!</title>
-    </head>
-    
-    
-    <style>
-        #yourID {
-        }
-        .yourClass {
-        }
-    </style>
-    
-    <body>
+	<head>
+		<title>My Webpage!</title>
+	</head>
+
+
+	<style>
+		#yourID {
+		}
+		.yourClass {
+		}
+	</style>
+
+
+	<body>
 		<form id="myForm" onSubmit="endP_formSubmit(event, success, error, complete)">
 			<input name="ajax" value="true" hidden />
 			<input name="form-id" value="3" hidden />
@@ -27,21 +28,22 @@
 			<textarea name="comment" placeholder="Your Comment"></textarea><br>
 			<input type="submit" value="Submit">
 		</form>
+		<script type="text/javascript" src="../source/min/endP.min.js"></script>
+		<script type="text/javascript">
+			var success = function(data, event) {
+				alert("success");
+				console.log(data, event);
+			};
+			var error = function(jqXHR, textStatus, errorThrown, event) {
+				alert("error");
+				console.log(jqXHR, textStatus, errorThrown, event);
+			};
+			var complete = function(jqXHR, textStatus, event) {
+				alert("complete");
+				console.log(jqXHR, textStatus, event);
+			};
+		</script>
     </body>
     
-    <script type="text/javascript" src="../source/min/endP.min.js"></script>
-    <script type="text/javascript">
-		var success = function(data, event) {
-			alert("success");
-			console.log(data, event);
-		};
-		var error = function(jqXHR, textStatus, errorThrown, event) {
-			alert("error");
-			console.log(jqXHR, textStatus, errorThrown, event);
-		};
-		var complete = function(jqXHR, textStatus, event) {
-			alert("complete");
-			console.log(jqXHR, textStatus, event);
-		};
-    </script>
+    
 </html>
