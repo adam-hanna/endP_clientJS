@@ -1,4 +1,4 @@
-var endP_formSubmit = function(event, success, error, complete) {
+function endP_formSubmit(event, success, error, complete) {
 	event.preventDefault();
 	$.ajax({
 		"type":     "POST",
